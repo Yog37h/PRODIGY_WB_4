@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:
+        linear-gradient(
+            to bottom,
+            #1c1c1c 50%,
+            #2a2a2a 50%
+        );
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    width: 320px;
+    height: max-content;
+    min-height: 320px;
+    background-color: #333333;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px #00000070;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+main form {
+    border: 1px solid #ffffff40;
+    display: flex;
+    border-radius: 25px;
+    justify-content: space-between;
+    background-color: #444444;
+}
+
+main form input,
+main form button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+main form i {
+    opacity: 0.8;
+}
+
+main .result {
+    padding-top: 25px;
+    text-align: center;
+}
+
+main .result .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: #d1d1d1;
+}
+
+main .temperature img {
+    width: 160px;
+    filter: drop-shadow(0 10px 40px #00000050);
+}
+
+main .temperature figcaption {
+    font-size: 3.5em;
+    color: #e6e6e6;
+}
+
+main .description {
+    padding: 15px 0 25px;
+    color: #cccccc;
+}
+
+main ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+main li {
+    background-color: #ff616f;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 25px 15px;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 50%,
+        #ffffff15 50%
+    );
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+main ul li i {
+    font-size: 2.2em;
+    margin: 15px 0;
+    display: block !important;
+}
+
+main li:nth-child(2) {
+    background-color: #ff9f43;
+}
+
+main li:nth-child(3) {
+    background-color: #1e90ff;
+}
+
+main.error {
+    animation: errorEffect 0.3s linear 1;
+}
+
+@keyframes errorEffect {
+    0% {
+        transform: translate(12px, 6px);
+    }
+    25% {
+        transform: translate(-6px, 0);
+    }
+    50% {
+        transform: translate(10px, 3px);
+    }
+    75% {
+        transform: translate(-3px, 6px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
